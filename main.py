@@ -19,10 +19,10 @@ def drink_preference(drink, time):
                          "sailing in the caribean", 
                         "while dreaming of the caribean"]
             choice = random.randint(0, len(locations))
-            print("Water is always an excellent choice, " + locations[choice])
+            print("Water is always an excellent choice, " + locations[choice-1])
 
     if drink == "tea":
-        if time == 'morning':
+        if time == "morning":
             print("Enjoy a black tea or a green tea, with or without milk.")
 
         elif time == "afternoon":
