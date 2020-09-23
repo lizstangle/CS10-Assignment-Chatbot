@@ -1,26 +1,27 @@
+import random
+
 print("Welcome to Coffee and Tea Guru.")
 
 def drink_preference(drink, time):
 
     if drink == "coffee":
         if time == "morning":
-            print("How about a cappuccino? You can have whatever coffee drink you like, with or without dairy.") 
+            print("How about a cappuccino? You can have whatever coffee drink you like, with or without milk.") 
 
         elif time == "afternoon":
-            print("Have an espresso, americano or drip coffee and hold the milk!")
+            print("Go for an espresso, americano or drip coffee and hold the milk!")
 
-        else time == "night":
+        elif time == "night":
             print("Skip the coffee and have some water.")
-            
-    if drink == "water":
-            print("Water is always a great option.")
-        # return "Good morning! Feel free to enjoy any coffee you like, with or without milk. 
-        #     You could have a cappuccino, a brew coffee with cream, a cafe au lait, a machiato. There are so many 
-        #     delicious options!"
-        #     else:
-        #     return("Wonderful. Enjoy an espresso or other black coffee.")
 
-    elif drink == "tea":
+    if drink == "water":
+            locations = ["while watching cinema of the caribean", 
+                         "sailing in the caribean", 
+                        "while dreaming of the caribean"]
+            choice = random.randint(0, len(locations))
+            print("Water is always an excellent choice, " + locations[choice])
+
+    if drink == "tea":
         if time == 'morning':
             print("Enjoy a black tea or a green tea, with or without milk.")
 
@@ -30,8 +31,7 @@ def drink_preference(drink, time):
         elif time == "night":
             print("Enjoy an herbal tea and hold the milk.")
 
-    elif drink == "water":
-        print("Water is always an excellent choice!")            
+
 
 valid_drinks = ["coffee", "tea", "water"]
 valid_drink = False
@@ -47,5 +47,4 @@ while valid_time is False:
     if time in valid_times:
         valid_time = True
     
-rec = drink_preference(drink, time)
-# print("definitely go for: "  + rec)
+drink_preference(drink, time)
