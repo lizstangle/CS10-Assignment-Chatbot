@@ -28,13 +28,13 @@ def drink_preference(drink, time):
         elif time == "night":
             return "Enjoy an herbal tea and hold the milk."
 
-    elif drink == "water"
+    elif drink == "water":
         return "Water is always an excellent choice!"            
 
 valid_drinks = ["Coffee", "Tea", "Water"]
 valid_drink = False
 while valid_drink == False:
-    drink = input("Would you like Coffee or Tea or Water?")
+    drink = input("Would you like Coffee or Tea?")
     if drink in valid_drinks:
         valid_drink = True
 
