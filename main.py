@@ -15,9 +15,9 @@ def drink_preference(drink, time):
             print("Skip the coffee and have some water.")
 
     if drink == "water":
-            locations = ["while watching cinema of the caribean", 
-                         "sailing in the caribean", 
-                        "while dreaming of the caribean"]
+            locations = ["while watching cinema of the Caribean", 
+                         "sailing in the Caribean", 
+                        "while dreaming of the Caribean"]
             choice = random.randint(0, len(locations))
             print("Water is always an excellent choice, " + locations[choice-1])
 
